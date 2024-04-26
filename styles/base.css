@@ -37,6 +37,7 @@ nav a:hover {
 main {
     display: grid;
     grid-template-columns: 2fr 1fr;
+    max-width: fit-content;
 }
 
 .card-1 {
@@ -48,7 +49,7 @@ main {
     display: flex;
 }
 
-.card-1 h1 {
+.card-1 h2 {
     text-align: center;
     text-decoration: underline;
 }
