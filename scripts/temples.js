@@ -12,3 +12,7 @@ hamButton.addEventListener("click", () => {
     ul.classList.toggle("open-ul");
     hamButton.classList.toggle("open");
 });
+
+function changeMenu(menu) {
+    document.getElementById('menuHeading').innerText = menu;
+}
