@@ -75,8 +75,7 @@ li {
 }
 
 li:hover {
-    text-decoration: underline;
-    text-underline-offset: 0.1em;
+    text-decoration: none;
     cursor: pointer;
 }
 
