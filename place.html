@@ -1,18 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Country-WDD 131 - Dynamic Web Fundamentals</title>
-    <meta name="description"content="Country-WDD 131 - Dynamic Web Fundamentals"/>
-    <meta name="author" content="Prince George K.N. Ndiwalana" />
-    <link rel="stylesheet" href="styles/place.css" />
-    <link rel="stylesheet" href="styles/place-large.css"/>
+    <meta name="description" content="This is week 03 assignments in which we are required to create a page with information about a country we live, or we've visited or we wish to visit. Personally, my page is about a country I have visited the most and I still wish to go back again.">
+    <meta name="author" content="Prince George K.N. Ndiwalana">
+    <link rel="stylesheet" href="styles/place.css">
     <script src="scripts/place.js" defer></script>
-    <script src="scripts/place.js" defer></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="wireframe" href="wireframes/W03_wf.drawio">
 
   </head>
 
@@ -23,9 +21,9 @@
     <main>
       <div class="photo">
         <picture>
-          <source media="(min-width:1000px)" srcset="images/Colombia_horizontal_1200.webp">
-          <source media="(min-width:500px)" srcset="images/Colombia_horizontal_1000.webp">
-          <img src="images/Colombia_vertical_500px.webp" alt="Colombia Image">
+          <source media="(min-width:1000px)" srcset="images/sud_jhb.webp">
+          <source media="(min-width:500px)" srcset="images/sud_jhb.webp">
+          <img src="images/sud_jhb.webp" alt="The Orlando/Soweto Towers">
         </picture>
       </div>
 
@@ -35,13 +33,13 @@
           <h2>Data</h2>
           <table>
             <tbody>
-              <tr><th>Country: </th><td>Colombia</td></tr>
-              <tr><th>Area: </th><td>1.138.910</td></tr>
-              <tr><th>Population: </th><td>51.609.000</td></tr>
+              <tr><th>Country: </th><td>South Africa</td></tr>
+              <tr><th>Area: </th><td>1,213,090km<sup>2</sup></td></tr>
+              <tr><th>Population: </th><td>60,939,603</td></tr>
               <tr><th>Capital: </th><td>Pretoria</td></tr>
               <tr><th>Language: </th><td>IsiZulu, IsiXhosa, Ndebele, Afrikaan, English, Et.c</td></tr>
-              <tr><th>Currency: </th><td>Colombian Peso COP</td></tr>
-              <tr><th>Calling code: </th><td>+27</td></tr>
+              <tr><th>Currency: </th><td>South African Rand </td></tr>
+              <tr><th>Code: </th><td>+27</td></tr>
             </tbody>
           </table>
         </div>
@@ -52,7 +50,7 @@
           <table>
             <tbody>
           
-              <tr><th>Temperature: </th><td>27 C</td></tr>
+              <tr><th>Temperature: </th><td>27&deg;C</td></tr>
               <tr><th>Conditions: </th><td>Sunny</td></tr>
               <tr><th>Wind: </th><td>13 km/h</td></tr>
               <tr><th >Wind Chill: </th><td id="calculateWindChill"> °C</td></tr>
@@ -67,10 +65,7 @@
   
 
     <footer>
-      <p>
-        <span id="currentyear"></span>
-        |Prince George K.N. Ndiwalana|
-      </p>
+      <p>&copy;<span id="currentyear"></span>|Prince George K.N. Ndiwalana| Uganda</p>
       <p id="lastModified"></p>
     </footer>
 
