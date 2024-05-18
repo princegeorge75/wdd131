@@ -79,6 +79,50 @@ li:hover {
     cursor: pointer;
 }
 
+/*Main Design*/
+#titlePage {
+    color: var(--fithColor);
+    text-align: center;
+    margin-bottom: 1rem;
+
+}
+
+.album {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px 10px;
+}
+
+.slots {
+    background-color: rgb(238, 238, 238);
+    padding: 1rem;
+    border: 1px solid black;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 15px;
+}
+
+.titleTemple {
+
+    text-align: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding-bottom: 10px;
+    font-style: italic;
+    color: var(--fithColor);
+    font-size: 30px;
+}
+
+.slots img {
+    margin: 15px;
+    box-shadow: 5px 5px 20px rgb(0, 0, 0, 0.2);
+
+}
+
+figure {
+    text-align: center;
+}
+
+
 img {
     width: 100%;
     height: 300px;

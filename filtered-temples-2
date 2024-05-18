@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Erick Orelalna">
+    <meta name="description" content="WDD 131 - temple album">
+    <link rel="icon" href="images/temples-album/icon.jpg" type="image/x-icon">
+    <title>WDD 131 - Temples Album</title>
+    <link rel="stylesheet" href="styles/filtered-temples-1.css">
+    <link rel="stylesheet" href="styles/filtered-temples-large.css">
+    <script src="scripts/filtered-temples-2.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>⛪Temple Album</h1>
+        <button id="menu"></button>
+        <nav>
+            <ul>
+                <li><a class="active" id="home" href="#">Home</a></li>
+                <li><a class="active" id="new" href="#">New</a></li>
+                <li><a class="active" id="large" href="#">Large</a></li>
+                <li><a class="active" id="old" href="#">Old</a></li>
+                <li><a class="active" id="small" href="#">Small</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2 id="titlePage">Home</h2>
+        <div class="album">
+        </div>
+    </main>
+    <footer>
+        <p>
+            <span>&copy;</span>
+            <span id="currentyear"></span>
+            Erick Orellana
+            Guatemala
+        </p>
+        <p id="modified"></p>
+    </footer>
+</body>
+</html>

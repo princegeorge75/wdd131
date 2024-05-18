@@ -119,6 +119,48 @@ const temples = [
 
 
 
+function displayTemplesAlbum(templeObject) {
+	// albumContainer.innerHTML = "";
+	templeObject.forEach(index => {
+
+		//Here we are creating the all parts per image.
+		const slot = document.createElement("section");
+		slot.setAttribute("class", "slots");
+
+		const nameTemple = document.createElement("h3");
+		nameTemple.setAttribute("class", "titleTemple");
+		nameTemple.textContent = `${index.templeName}`;
+
+		const locationTemple = document.createElement("p");
+		locationTemple.textContent = `Location: ${index.location}`;
+
+		const dedicatedDate = document.createElement("p");
+		dedicatedDate.textContent = `Dedicated: ${index.dedicated}`;
+
+		const sizeTemple = document.createElement("p");
+		sizeTemple.textContent = `Size: ${index.area}`;
+		
+		const imgTemple = document.createElement("img");
+		imgTemple.setAttribute("src", index.imageUrl);
+		imgTemple.setAttribute("alt", `temple ${index.nameTemple}`);
+		imgTemple.setAttribute("loading", "lazy");
+		// imgTemple.setAttribute("width", 1000);
+		// imgTemple.setAttribute("height", 350);
+
+		slot.appendChild(nameTemple);
+		slot.appendChild(locationTemple);
+		slot.appendChild(dedicatedDate);
+		slot.appendChild(sizeTemple);
+		slot.appendChild(imgTemple);
+		
+		albumContainer.append(slot);
+
+	});
+
+}
+
+
+
 displayTemplesAlbum(temples); //Displaying the temples.;
 
 //Home Button
