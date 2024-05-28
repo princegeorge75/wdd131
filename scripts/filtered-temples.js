@@ -17,7 +17,8 @@ function changeMenu(menu) {
     document.getElementById('menuHeading').innerText = menu;
 }
 
-const temples = [
+const temples = 
+[
     {
       templeName: "Aba Nigeria",
       location: "Aba, Nigeria",
@@ -74,137 +75,48 @@ const temples = [
       imageUrl:
       "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
     },
+    {
+        templeName: "Bentonville Arkansas",
+        location: "Bentonville Arkansas",
+        dedicated: "2023, September, 17",
+        area: 26472,
+        imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/bentonville-arkansas/800x800/Bentonville-Temple-Exterior-13.jpg"
+    },
+    {
+        templeName: "Kinshasa D.R Congo",
+        location: "Kinshasa D.R Congo",
+        dedicated: "2019, April, 14",
+        area: 12000,
+        imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/bentonville-arkansas/800x800/Bentonville-Temple-Exterior-13.jpg"
+    }
     // Add more temple objects here...
   ];
 
-  function displayTemplesAlbum(templeObject) {
-	// albumContainer.innerHTML = "";
-	templeObject.forEach(index => {
+  
+  function createTempleCard() {
+    temples.forEach(temple => {
+        let card = document.createElement("section");
+        let name = document.createElement("h3");
+        let location = document.createElement("p");
+        let dedication = document.createElement("p");
+        let area = document.createElement("p");
+        let img = document.createElement("img");
 
-		//Here we are creating the all parts per image.
-		const slot = document.createElement("section");
-		slot.setAttribute("class", "slots");
+        name.textContent = temple.templeName;
+        location.innerHTML = `<span class="label">Location:</span> ${temple.location}`;
+        dedication.innerHTML = `<span class="label">Dedication:</span> ${temple.dedicated}`;
+        area.innerHTML = `<span class="label">Size:</span>${temple.area}`;
+        img.setAttribute("src",temple.imageUrl);
+        img.setAttribute("alt",`${temple.templeName} Temple`);
+        img.setAttribute("loading", "lazy");
 
-		const nameTemple = document.createElement("h3");
-		nameTemple.setAttribute("class", "titleTemple");
-		nameTemple.textContent = `${index.templeName}`;
+        card.appendChild(name);
+        card.appendChild(location);
+        card.appendChild(dedication);
+        card.appendChild(area);
+        card.appendChild(img);
 
-		const locationTemple = document.createElement("p");
-		locationTemple.textContent = `Location: ${index.location}`;
-
-		const dedicatedDate = document.createElement("p");
-		dedicatedDate.textContent = `Dedicated: ${index.dedicated}`;
-
-		const sizeTemple = document.createElement("p");
-		sizeTemple.textContent = `Size: ${index.area}`;
-		
-		const imgTemple = document.createElement("img");
-		imgTemple.setAttribute("src", index.imageUrl);
-		imgTemple.setAttribute("alt", `temple ${index.nameTemple}`);
-		imgTemple.setAttribute("loading", "lazy");
-		// imgTemple.setAttribute("width", 1000);
-		// imgTemple.setAttribute("height", 350);
-
-		slot.appendChild(nameTemple);
-		slot.appendChild(locationTemple);
-		slot.appendChild(dedicatedDate);
-		slot.appendChild(sizeTemple);
-		slot.appendChild(imgTemple);
-		
-		albumContainer.append(slot);
-
-	});
-
+        document.querySelector(".temple-img").appendChild(card);
+    });
 }
-
-
-
-function displayTemplesAlbum(templeObject) {
-	// albumContainer.innerHTML = "";
-	templeObject.forEach(index => {
-
-		//Here we are creating the all parts per image.
-		const slot = document.createElement("section");
-		slot.setAttribute("class", "slots");
-
-		const nameTemple = document.createElement("h3");
-		nameTemple.setAttribute("class", "titleTemple");
-		nameTemple.textContent = `${index.templeName}`;
-
-		const locationTemple = document.createElement("p");
-		locationTemple.textContent = `Location: ${index.location}`;
-
-		const dedicatedDate = document.createElement("p");
-		dedicatedDate.textContent = `Dedicated: ${index.dedicated}`;
-
-		const sizeTemple = document.createElement("p");
-		sizeTemple.textContent = `Size: ${index.area}`;
-		
-		const imgTemple = document.createElement("img");
-		imgTemple.setAttribute("src", index.imageUrl);
-		imgTemple.setAttribute("alt", `temple ${index.nameTemple}`);
-		imgTemple.setAttribute("loading", "lazy");
-		// imgTemple.setAttribute("width", 1000);
-		// imgTemple.setAttribute("height", 350);
-
-		slot.appendChild(nameTemple);
-		slot.appendChild(locationTemple);
-		slot.appendChild(dedicatedDate);
-		slot.appendChild(sizeTemple);
-		slot.appendChild(imgTemple);
-		
-		albumContainer.append(slot);
-
-	});
-
-}
-
-
-
-displayTemplesAlbum(temples); //Displaying the temples.;
-
-//Home Button
-function hom(){
-	albumContainer.innerHTML = "";
-	displayTemplesAlbum(temples);
-	titlePage.textContent = "Home";
-}
-
-//New Button
-function newf(){
-	albumContainer.innerHTML = "";
-	const newTEmples = temples.filter(temple => Number(temple.dedicated.substring(0,4)) > 2000);
-	displayTemplesAlbum(newTEmples);
-	titlePage.textContent = "New";
-}
-
-//Oldest Temples.
-function oldest(){
-	const oldTEmples = temples.filter(temple => Number(temple.dedicated.substring(0,4)) < 1900);
-	albumContainer.innerHTML = "";
-	displayTemplesAlbum(oldTEmples);
-	titlePage.textContent = "Old";
-}
-
-//Large Temples.
-function largert(){
-	const largTEmples = temples.filter(temple => temple.area > 90000);
-	albumContainer.innerHTML = "";
-	displayTemplesAlbum(largTEmples);
-	titlePage.textContent = "Large";
-}
-
-//Small Temples.
-function smallt(){
-	const smallTEmples = temples.filter(temples => temples.area < 10000);
-	albumContainer.innerHTML = "";
-	displayTemplesAlbum(smallTEmples);
-	titlePage.textContent = "Small";
-}
-
-
-oldMenu.addEventListener("click", oldest);
-home_.addEventListener("click", hom);
-newt.addEventListener("click", newf);
-large.addEventListener("click", largert);
-small.addEventListener("click", smallt);
+createTempleCard();
