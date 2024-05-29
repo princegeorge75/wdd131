@@ -28,7 +28,7 @@ oldbutton.addEventListener("click", () => {
   changeMenu("Old Temples")
   let newlist = temples.filter(temple => {
     const dedication = new Date(temple.dedicated);
-    if(dedication.getFullYear() < 2000) return true;
+    if(dedication.getFullYear() < 1900) return true;
     return false;
   });
   createTempleCard(newlist);
@@ -39,7 +39,7 @@ newbutton.addEventListener("click", () => {
   changeMenu("New Temples");
   let newlist = temples.filter(temple => {
     const dedication = new Date(temple.dedicated);
-    return(dedication.getFullYear() > 1900);
+    return(dedication.getFullYear() > 2000);
   });
   createTempleCard(newlist);
 });
@@ -129,6 +129,13 @@ const temples =
         dedicated: "2019, April, 14",
         area: 12000,
         imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/bentonville-arkansas/800x800/Bentonville-Temple-Exterior-13.jpg"
+    },
+    {
+        templeName: "Bountiful Utah",
+        location: "Bountiful Utah",
+        dedicated: "1995, January, 8",
+        area: 104000,
+        imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/bountiful-utah/800x500/bountiful-temple-766347-wallpaper.jpg"
     }
     // Add more temple objects here...
   ];
