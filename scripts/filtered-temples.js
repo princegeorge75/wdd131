@@ -17,6 +17,47 @@ function changeMenu(menu) {
     document.getElementById('menuHeading').innerText = menu;
 }
 
+const homebutton = document.getElementById("home");
+homebutton.addEventListener("click", () => {
+  changeMenu("Home");
+  createTempleCard(temples);
+});
+
+const oldbutton = document.getElementById("old");
+oldbutton.addEventListener("click", () => {
+  changeMenu("Old Temples")
+  let newlist = temples.filter(temple => {
+    const dedication = new Date(temple.dedicated);
+    if(dedication.getFullYear() < 2000) return true;
+    return false;
+  });
+  createTempleCard(newlist);
+});
+
+const newbutton = document.getElementById("new");
+newbutton.addEventListener("click", () => {
+  changeMenu("New Temples");
+  let newlist = temples.filter(temple => {
+    const dedication = new Date(temple.dedicated);
+    return(dedication.getFullYear() > 1900);
+  });
+  createTempleCard(newlist);
+});
+
+const smallbutton = document.getElementById("small");
+smallbutton.addEventListener("click", () => {
+  changeMenu("Small Temples");
+  let newlist = temples.filter(temple => temple.area < 10000);
+  createTempleCard(newlist);
+});
+
+const largebutton = document.getElementById("large");
+largebutton.addEventListener("click", () => {
+  changeMenu("Large Temples");
+  let newlist = temples.filter(temple => temple.area > 90000);
+  createTempleCard(newlist);
+});
+
 const temples = 
 [
     {
@@ -93,8 +134,10 @@ const temples =
   ];
 
   
-  function createTempleCard() {
-    temples.forEach(temple => {
+  function createTempleCard(templelist) {
+    const temp = document.querySelector(".temple-img");
+    temp.innerHTML = '';
+    templelist.forEach(temple => {
         let card = document.createElement("section");
         let name = document.createElement("h3");
         let location = document.createElement("p");
@@ -116,7 +159,7 @@ const temples =
         card.appendChild(area);
         card.appendChild(img);
 
-        document.querySelector(".temple-img").appendChild(card);
+        temp.appendChild(card);
     });
 }
-createTempleCard();
+createTempleCard(temples);
