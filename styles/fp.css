@@ -1,0 +1,148 @@
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(255, 255, 255, 0.5);
+    
+}
+
+.header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background: #333399;
+    padding: 10px;
+    color: white;
+}
+
+.logo img {
+    max-width: 100px;
+}
+
+.nav {
+    justify-content: space-between;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    margin: 10px;
+}
+
+.nav a:hover {
+    text-decoration: none;
+    color: #333399;
+    background-color: azure;
+    border-radius: 5px;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.section {
+    background: #fff;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+    font-family: Georgia, serif;
+    color: #333399;
+}
+
+p {
+    line-height: 1.6;
+}
+
+.images {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-height: 500px;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 10px;
+    padding: 5px;
+}
+
+.about {
+    margin: 10px;
+    border: solid 2px rgb(0,0,0,0.2);
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.history {
+    margin: 10px;
+    border: solid 2px rgb(0,0,0,0.2);
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.achievement {
+    margin: 10px;
+    border: solid 2px rgb(0,0,0,0.2);
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.image img {
+    width: 100%;
+    max-height: 100px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.footer {
+    background: #333399;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+    border-top: solid 5px rgb(0, 0, 0, 0.5);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin: 10px 0 5px;
+}
+
+form input, form textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+
+form button {
+    padding: 10px 20px;
+    background: #333399;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+form button{
+background: #15978c;
+}
