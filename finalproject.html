@@ -3,64 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 131 | Final Project</title>
-    <meta name="description" content="This is the final project of the WDD 131 course as planned from the W05 siteplan.html">
-    <meta name="author" content="Prince George Ndiwalana">
+    <title>Career Institute Uganda</title>
     <link rel="stylesheet" href="styles/fp.css">
     <link rel="stylesheet" href="styles/fp-large.css">
-    <script src="scripts/fp.js"></script>
+    <script src="scripts/fp.js" defer></script>
 </head>
 <body>
-    <header class="header">
-        <div class="logo">
-            <img src="images/career-logo.jpg" width="100" alt="Career Institute Badge">
-        </div>
-        <nav class="nav">
-            <a href="finalproject.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
+    <header>
+        <nav>
+            <div id="nav-header">
+                <button id="hamburger" title="menu button"></button>
+            </div>
+            <ul>
+                <li><a href="finalproject.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="admissions.html">Admissions</a></li>
+                <li><a href="news.html">News & Events</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
         </nav>
     </header>
     <main>
-        <div class="cards">
-            <section class="about">
-                <h1>Brief About</h1>
-                <p>Career Institute is the only IATA affiliated institute Uganda, providing a holistic approach to learning with the best facilities and environment for students to enhance their aviation future.</p>
-                <img src="images/training.jpg" height="200" alt="">
-            </section>
-
-            <section class="history">
-                <h1>Brief History</h1>
-                <p>Our history goes back to the year 1973 when the school was founded by Prof. George Albert, who was fond of aeronautics.</p>
-                <img src="images/prof.jpg" height="230" alt="Prof. George">
-            </section>
-
-            <section class="achievement">
-                <h1>Achievement</h1>
-                <p>We have achieved numerous milestones in skilling and empowering the rising generations with practical knowledge and experience. Winning the Best Aviation Institute, African Region 7 times and also becoming the people's choice school from 2016 up to date.</p>
-                <img src="images/achievement.jpg" height="200" alt="">
-            </section>
-        </div>
-
-        <section class="images">
-            <div class="image">
-                <img src="images/award1.jpg" alt="Achievement 1" loading="lazy">
-            </div>
-            <div class="image">
-                <img src="images/award2.jpg" alt="Achievement 2" loading="lazy">
-            </div>
-            <div class="image">
-                <img src="images/award3.jpg" alt="Achievement 3" loading="lazy">
+        <section id="hero">
+            <h1>Welcome to Career Institute Uganda</h1>
+            <p>Your future starts here</p>
+            <a href="about.html" class="btn">Learn More</a>
+        </section>
+        <section id="courses">
+            <h2>Our Courses</h2>
+            <div class="course-list">
+                <!-- Courses will be dynamically loaded here -->
             </div>
         </section>
+        <section id="news">
+            <h2>Latest News & Events</h2>
+            <div class="news-list">
+                <!-- News and events will be dynamically loaded here -->
+            </div>
+        </section>
+        <section id="admissions">
+            <h2>Admissions</h2>
+            <p>Learn about our admissions process, requirements, and deadlines.</p>
+            <a href="admissions.html" class="btn">More Info</a>
+        </section>
     </main>
-    <footer class="footer">
-        <p>
-            <span>&copy;</span>
-            <span id="currentyear"></span>
-            Prince George Ndiwalana | Kampala, Uganda
-        </p>
-        <p id="modified"></p>
+    <footer>
+        <p>&copy; 2024 Career Institute Uganda</p>
+        <p>Last Modified: <span id="lastModified"></span></p>
     </footer>
 </body>
 </html>

@@ -1,148 +1,170 @@
+#hamburger {
+    border: none;
+    background: none;
+    font-size: larger;
+    color: white;
+}
+
+#hamburger::before {
+    content: "☰";
+}
+
+#hamburger.open::before {
+    content: "X";
+}
+
+#nav {
+    display: flex;
+    flex-direction: column;
+    background-color: #104D71;
+    width: 100%;
+    margin: 0;
+    justify-content: center;
+    padding: 10px;
+    color: white;
+}
+
+
+nav a:hover {
+    text-decoration: none;
+    background-color: aliceblue;
+    color: #104D71;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+#nav-header {
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px;
+    margin: 5px;
+}
+
+ul {
+    display: none;
+    margin: 5px;
+    padding-top: 10px;
+    padding: 5px;
+}
 
 body {
     font-family: Arial, sans-serif;
-    color: #333;
     margin: 0;
     padding: 0;
-    background-color: rgba(255, 255, 255, 0.5);
-    
+    background-color: #f9f9f9;
+    color: #333;
 }
 
-.header {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    background: #333399;
-    padding: 10px;
+header {
+    background-color: #004080;
     color: white;
+    padding: 1em 0;
+    text-align: center;
 }
 
-.logo img {
-    max-width: 100px;
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
-.nav {
-    justify-content: space-between;
+nav ul li {
+    display: inline;
+    margin: 0 10px;
 }
 
-.nav a {
+nav ul li a {
     color: white;
     text-decoration: none;
-    margin: 10px;
 }
 
-.nav a:hover {
+main {
+    padding: 2em;
+}
+
+#hero {
+    text-align: center;
+    background-color: #e0e0e0;
+    padding: 2em;
+}
+
+#hero .btn {
+    background-color: #004080;
+    color: white;
+    padding: 10px 20px;
     text-decoration: none;
-    color: #333399;
-    background-color: azure;
-    border-radius: 5px;
 }
 
-.container {
-    width: 80%;
-    margin: auto;
-    overflow: hidden;
-}
-
-.section {
-    background: #fff;
-    padding: 20px;
-    margin: 20px 0;
+#about, #contact, #courses, #admissions, #news {
+    background-color: white;
+    padding: 2em;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2em;
 }
 
-h1 {
-    font-family: Georgia, serif;
-    color: #333399;
-}
-
-p {
-    line-height: 1.6;
-}
-
-.images {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-.cards {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    max-height: 500px;
-    justify-content: space-evenly;
-    align-items: center;
-    margin: 10px;
-    padding: 5px;
-}
-
-.about {
-    margin: 10px;
-    border: solid 2px rgb(0,0,0,0.2);
-    border-radius: 10px;
-    padding: 5px;
-}
-
-.history {
-    margin: 10px;
-    border: solid 2px rgb(0,0,0,0.2);
-    border-radius: 10px;
-    padding: 5px;
-}
-
-.achievement {
-    margin: 10px;
-    border: solid 2px rgb(0,0,0,0.2);
-    border-radius: 10px;
-    padding: 5px;
-}
-
-.image img {
-    width: 100%;
-    max-height: 100px;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-.footer {
-    background: #333399;
+footer {
+    background-color: #004080;
     color: white;
     text-align: center;
-    padding: 10px;
-    margin-top: 20px;
-    border-top: solid 5px rgb(0, 0, 0, 0.5);
-}
-
-form {
-    display: flex;
-    flex-direction: column;
+    padding: 1em 0;
+    width: 100%;
 }
 
 form label {
-    margin: 10px 0 5px;
+    display: block;
+    margin-bottom: 5px;
 }
 
 form input, form textarea {
+    width: 50%;
     padding: 10px;
     margin-bottom: 10px;
-    border-radius: 8px;
     border: 1px solid #ccc;
-    font-size: 16px;
+    border-radius: 4px;
 }
 
+form textarea {
+    width: 50%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
 
 form button {
-    padding: 10px 20px;
-    background: #333399;
+    background-color: #004080;
     color: white;
+    padding: 10px 20px;
     border: none;
-    border-radius: 8px;
+    border-radius: 4px;
     cursor: pointer;
-    font-size: 16px;
 }
 
-form button{
-background: #15978c;
+form button:hover {
+    background-color: #003060;
+}
+
+.image-gallery, .course-list, .news-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.image-gallery img, .course-item img, .news-item img {
+    max-width: 100%;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.image-gallery .caption, .course-item .caption, .news-item .caption {
+    text-align: center;
+    margin-top: 5px;
 }
