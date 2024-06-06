@@ -32,6 +32,16 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // activate the hamburger button
+
+    const hamButton = document.querySelector("#hamburger");
+    const ul = document.querySelector("ul");
+    
+    hamButton.addEventListener("click", () => {
+        ul.classList.toggle("open-ul");
+        hamButton.classList.toggle("open");
+    });
+
     // Add course items to the Courses page
     const courseList = document.querySelector('.course-list');
     if (courseList) {
