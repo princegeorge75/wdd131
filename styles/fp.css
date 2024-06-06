@@ -36,14 +36,15 @@
 
 nav a:hover {
     text-decoration: none;
-    background-color: aliceblue;
-    color: #104D71;
+    background-color: #104D71;
+    color: #fff;
     cursor: pointer;
     border-radius: 15px;
 }
 
 #nav-header {
     color: #fff;
+    background-color: #104D71;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -106,6 +107,11 @@ main {
     text-decoration: none;
 }
 
+.btn {
+    color: #004080;
+    text-decoration:underline;
+}
+
 #about, #contact, #courses, #admissions, #news {
     background-color: white;
     padding: 2em;
@@ -118,7 +124,7 @@ footer {
     background-color: #004080;
     color: white;
     text-align: center;
-    padding: 1em 0;
+    padding: 1em;
     width: 100%;
 }
 
@@ -156,10 +162,15 @@ form button:hover {
     background-color: #003060;
 }
 
+figure{
+    justify-content: center;
+}
+
 .image-gallery, .course-list, .news-list {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
+    justify-content: space-evenly;
 }
 
 .image-gallery img, .course-item img, .news-item img {
@@ -172,6 +183,61 @@ form button:hover {
     text-align: center;
     margin-top: 5px;
 }
+ h2{
+    justify-content: center;
+    text-decoration: underline;
+    text-align: center;
+ }
+
+ /* Add this style to create boxes around each news item */
+#news .news-list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#news .news-item, .course-item {
+    flex: 1 1 calc(33.33% - 20px); /* Adjust width for responsiveness */
+    background-color: #f2f2f2;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+#news .news-item h2 {
+    margin-top: 0;
+}
+
+#news .news-item small {
+    display: block;
+    margin-top: 10px;
+    color: #888;
+}
+
+ .admissions-table {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse:unset;
+}
+
+thead th, tbody td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+thead th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
 
 
 @media screen and (min-width: 700px) {
@@ -181,6 +247,8 @@ form button:hover {
     }
 
     #nav {
+        background-color: #004080;
+        color: #fff;
         display: flex;
         flex-direction: row;
         justify-content: space-around;
@@ -196,5 +264,73 @@ form button:hover {
         padding: 0;
         min-width: 35%;
         justify-content: space-between;
+    }
+    
+    
+    nav a:hover {
+        text-decoration: none;
+        background-color: #fff;
+        color: #004080;
+        cursor: pointer;
+        border-radius: 15px;
+    }
+    
+    #nav-header {
+        color: #fff;
+        background-color: #104D71;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    
+    a {
+        color: #fff;
+        text-decoration: none;
+        padding: 5px;
+        margin: 5px;
+    }
+    
+    .open-ul {
+        display: block;
+        margin: auto;
+        padding-top: 10px;
+        padding: 0;
+    }
+    
+    li {
+        list-style: none;
+        padding: 5px;
+    }
+    
+    li:hover {
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    footer {
+        background-color: #004080;
+        color: white;
+        text-align: center;
+        padding: 1em;
+        width: 100%;
+    }
+
+    table {
+        width: auto;
+    }
+
+    #news .news-item, .course-list {
+        flex: 1 1 calc(50% - 20px); /* Adjust width for smaller screens */
+    }
+
+    #news .news-item, .course-list {
+        flex: 1 1 calc(100% - 20px); /* Adjust width for mobile screens */
+    }
+
+    #news .news-list, .course-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        flex-direction: column;
+        gap: 20px;
     }
 }

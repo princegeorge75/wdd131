@@ -22,6 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
         images.forEach(image => {
             const imgElement = document.createElement('img');
             imgElement.src = image.src;
+            imgElement.loading = 'lazy';
             const captionElement = document.createElement('div');
             captionElement.className = 'caption';
             captionElement.textContent = image.caption;
