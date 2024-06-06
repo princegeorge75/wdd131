@@ -43,48 +43,69 @@ document.addEventListener('DOMContentLoaded', function() {
         hamButton.classList.toggle("open");
     });
 
-    // Add course items to the Courses page
-    const courseList = document.querySelector('.course-list');
-    if (courseList) {
-        const courses = [
-            { title: 'Tourism & Travel Foundation', description: 'Learn the fundamentals of being a tourism and travel agent.' },
-            { title: 'Airport Operations', description: 'Explore the world of airport vicinities. What happens and what do people do at the airport building and in the aeroplane parking yard.' },
-            { title: 'Cargo Handling', description: 'Prepare for a career in the Air Cargo handling.' },
-        ];
-        courses.forEach(course => {
-            const titleElement = document.createElement('h3');
-            titleElement.textContent = course.title;
-            const descriptionElement = document.createElement('p');
-            descriptionElement.textContent = course.description;
-            const container = document.createElement('div');
-            container.className = 'course-item';
-            container.appendChild(titleElement);
-            container.appendChild(descriptionElement);
-            courseList.appendChild(container);
-        });
-    }
+   // Add course items to the Courses page
+const courseList = document.querySelector('.course-list');
+if (courseList) {
+    const courses = [
+        { title: 'Tourism & Travel Foundation', description: 'Learn the fundamentals of being a tourism and travel agent.', imgSrc: 'images/ttf.jpg' },
+        { title: 'Airport Operations', description: 'Explore the world of airport vicinities. What happens and what do people do at the airport building and in the aeroplane parking yard.', imgSrc: 'images/aop.jpg' },
+        { title: 'Cargo Handling', description: 'Prepare for a career in the Air Cargo handling.', imgSrc: 'images/ach.jpg' },
+    ];
+    courses.forEach(course => {
+        const imgElement = document.createElement('img');
+        imgElement.src = course.imgSrc;
+        imgElement.alt = course.title;
+        imgElement.loading = 'lazy'; // Set lazy loading
 
-    // Add news items to the News page
-    const newsList = document.querySelector('.news-list');
-    if (newsList) {
-        const newsItems = [
-            { title: 'New Semester Begins', description: 'Join us for the start of a new academic year.', date: 'June 1, 2024' },
-            { title: 'Workshop on AI', description: 'Attend our workshop on artificial intelligence and machine learning.', date: 'June 10, 2024' },
-            { title: 'Graduation Ceremony', description: 'Celebrate the achievements of our graduates.', date: 'July 15, 2024' }
-        ];
-        newsItems.forEach(news => {
-            const titleElement = document.createElement('h3');
-            titleElement.textContent = news.title;
-            const descriptionElement = document.createElement('p');
-            descriptionElement.textContent = news.description;
-            const dateElement = document.createElement('small');
-            dateElement.textContent = news.date;
-            const container = document.createElement('div');
-            container.className = 'news-item';
-            container.appendChild(titleElement);
-            container.appendChild(descriptionElement);
-            container.appendChild(dateElement);
-            newsList.appendChild(container);
-        });
-    }
+        const titleElement = document.createElement('h3');
+        titleElement.textContent = course.title;
+
+        const descriptionElement = document.createElement('p');
+        descriptionElement.textContent = course.description;
+
+        const container = document.createElement('div');
+        container.className = 'course-item';
+        container.appendChild(imgElement);
+        container.appendChild(titleElement);
+        container.appendChild(descriptionElement);
+
+        courseList.appendChild(container);
+    });
+}
+
+// Add news items to the News page
+const newsList = document.querySelector('.news-list');
+if (newsList) {
+    const newsItems = [
+        { title: 'New Semester Begins', description: 'Join us for the start of a new academic year.', date: 'June 1, 2024', imgSrc: 'images/new-semester.jpg' },
+        { title: 'Workshop on AI', description: 'Attend our workshop on artificial intelligence and machine learning.', date: 'June 10, 2024', imgSrc: 'images/college-ai.jpg' },
+        { imgSrc: 'images/grad.jpg', title: 'Graduation Ceremony', description: 'Celebrate the achievements of our graduates.', date: 'July 15, 2024'}
+    ];
+
+    newsItems.forEach(news => {
+        const imgElement = document.createElement('img');
+        imgElement.src = news.imgSrc;
+        imgElement.alt = news.title;
+        imgElement.loading = 'lazy'; // Set lazy loading
+
+        const titleElement = document.createElement('h3');
+        titleElement.textContent = news.title;
+
+        const descriptionElement = document.createElement('p');
+        descriptionElement.textContent = news.description;
+
+        const dateElement = document.createElement('small');
+        dateElement.textContent = news.date;
+
+        const container = document.createElement('div');
+        container.className = 'news-item';
+        container.appendChild(imgElement);
+        container.appendChild(titleElement);
+        container.appendChild(descriptionElement);
+        container.appendChild(dateElement);
+
+        newsList.appendChild(container);
+    });
+}
+
 });
